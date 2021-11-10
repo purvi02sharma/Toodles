@@ -13,7 +13,7 @@ addtaskbtn.addEventListener("click", function(){
             taskObj = JSON.parse(webtask);
         }
         taskObj.push({'task_name':addtaskinputval, 'completeStatus':false});
-		// console.log(taskObj, 'Ashendra');
+		
         localStorage.setItem("localtask", JSON.stringify(taskObj));
         addtaskinput.value = '';
     }
@@ -82,8 +82,7 @@ savetaskbtn.addEventListener("click", function(){
             taskObj[saveindex].task_name = addtaskinput.value;
         }
       }
-    // taskObj[saveindex] = {'task_name':addtaskinput.value, 'completeStatus':false} ;
-  //  taskObj[saveindex][task_name] = addtaskinput.value;
+    
   addtaskbtn.style.display="inline";
     savetaskbtn.style.display="none";
     deleteallbtn.style.display="inline";
@@ -105,9 +104,7 @@ function deleteitem(index){
 // complete task
 let addedtasklist = document.getElementById("addedtasklist");
     addedtasklist.addEventListener("click", function(e){
-       // console.log(e);
-        
-        // showtask();
+       
         console.log("completed");
         let webtask = localStorage.getItem("localtask");
         let taskObj = JSON.parse(webtask);
@@ -121,14 +118,14 @@ let addedtasklist = document.getElementById("addedtasklist");
                 if(keys == 'completeStatus' && taskObj[mytargetid][keys]==true){
                     console.log("remove");
                     taskObj[mytargetid].completeStatus = false;
-                   // taskObj[mytargetid] = {'task_name':taskValue, 'completeStatus':false};
+                  
                 }else if(keys == 'completeStatus' && taskObj[mytargetid][keys]==false){
                     console.log("add");
                     taskObj[mytargetid].completeStatus = true;
-                    //taskObj[mytargetid] = {'task_name':taskValue, 'completeStatus':true};
+                   
                 }
               }
-        //}
+        
         localStorage.setItem("localtask", JSON.stringify(taskObj));
         showtask();
     }
