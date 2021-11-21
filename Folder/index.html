@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List</title>
+  <link rel="icon" href="/icons/iconmonstr-school-23.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap"
+      rel="stylesheet"
+    />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<body >
+
+  <header class="main-file">
+   
+    <div class="sticky">
+      <div class="row">
+        
+          <img class="logo" src="assets/favicon.png" ><b class="logo">Todo List</b>
+            <input type="search" placeholder="Search" aria-label="Search" id="searchtextbox" >
+
+      </div>
+    </div>
+  </header>
+<main id="scroll">
+   <section class="todo-outer" >
+   
+      
+        <div >
+          <h1 id="title">Just do it.</h1>
+          <div class="todo-inner">
+            <div>
+            
+                <input type="text" placeholder="Enter your task" id="addtaskinput">
+                <input type="hidden" id="saveindex">
+              
+              <button type="button" class="addbtn" id="addtaskbtn">
+                Add Task
+              </button>
+              <button style="display: none;" type="button" class="addbtn" id="savetaskbtn">
+                Save Task
+              </button>
+              <button  type="button" class="delbtn" id="deleteallbtn" >
+                Delete All
+              </button>
+
+           
+            </div>
+            <div class="to-do-output">
+              <table id="addedtasklist">
+                
+              </table>
+            </div>
+          </div>
+        </div>
+  </section>
+</main>
+  <footer contenteditable="">
+      <div class="footer-wrapper">
+        <h5>Created By PURVI SHARMA &copy;</h5>
+        <ul>
+          <li>
+            <a
+              href="https://twitter.com/lpuuniversity?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+              title="twitter-social-media"
+              target="blank"
+              ><img src="icons/twitter.svg" alt="twitter-social-media"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UCX9XV7w4GX6f3bnDKAwMKFQ"
+              title="youtube-social-media"
+              target="blank"
+              ><img src="icons/youtube.svg" alt="youtube-social-media"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/lpuuniversity/?hl=en"
+              title="instagram-social-media"
+              target="blank"
+              ><img src="icons/instagram.svg" alt="instagram-social-media"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  
+  <script src="main.js"></script>
+</body>
+
+</html>
